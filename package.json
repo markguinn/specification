@@ -25,7 +25,8 @@
     "validate:schema": "tsc --noEmit schema/schema.ts schema/draft/schema.ts",
     "generate:json": "typescript-json-schema --defaultNumberType integer --required schema/schema.ts \"*\" -o schema/schema.json && typescript-json-schema --defaultNumberType integer --required schema/draft/schema.ts \"*\" -o schema/draft/schema.json",
     "serve:docs": "hugo --source site/ server --logLevel debug --disableFastRender",
-    "format": "prettier --write \"docs/**/*.md\""
+    "format": "prettier --write \"**/*.md\"",
+    "format:check": "prettier --check \"**/*.md\""
   },
   "devDependencies": {
     "ajv": "^8.17.1",
